@@ -1,0 +1,31 @@
+
+\chapter{An Overview and Brief History of Feedback Control}
+
+\section{Review Questions}
+
+\begin{problem}
+   What are the main components of a feedback control system?
+\end{problem}
+
+\begin{solution}
+   A feedback control system has
+   \begin{enumerate}
+      \item a \emph{sensor} that measures the output that is to be controlled,
+      \item an \emph{input filter} that provides a reference value against
+         which the sensor's output is compared,
+      \item a \emph{comparator} that computes the difference between the output
+         of the sensor and the output of the input filter,
+      \item a \emph{controller} that translates the output of the comparator
+         into a control signal,
+      \item a \emph{plant}, which consists of
+         \begin{enumerate}
+            \item an \emph{actuator} that receives the control signal and
+               causes a physical change in the system and
+            \item a \emph{process} that can be disturbed by environmental
+               forces but is primarily influenced by the actuator to produce an
+               output measured by the sensor.
+         \end{enumerate}
+   \end{enumerate}
+\end{solution}
+
+
