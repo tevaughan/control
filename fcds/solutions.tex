@@ -1,43 +1,19 @@
 
-\documentclass{book}
+\documentclass[twocolumn,letterpaper]{book}
 
-\usepackage{amsmath,amssymb}
-\usepackage{amsthm}
-\usepackage{thmtools}
-
-% Setup of thmtools. See
-% 'http://tex.stackexchange.com/questions/19947/example-solution-environment',
-% whose approach is modified so that 'problem' replaces 'example'.
-\declaretheoremstyle[
-   spaceabove=6pt, spacebelow=6pt,
-   headfont=\normalfont\bfseries,
-   notefont=\mdseries, notebraces={(}{)},
-   bodyfont=\normalfont,
-   postheadspace=1em,
-   numberwithin=section
-]{prbstyle}
-\declaretheoremstyle[
-   spaceabove=6pt, spacebelow=6pt,
-   headfont=\normalfont\bfseries,
-   notefont=\mdseries, notebraces={(}{)},
-   bodyfont=\normalfont,
-   postheadspace=1em,
-   headpunct={},
-   qed=$\blacktriangleleft$,
-   numbered=no
-]{solstyle}
-\declaretheorem[style=prbstyle]{problem}
-\declaretheorem[style=solstyle]{solution}
-% At this point, we have new environments, called 'problem' and 'solution'.
-
-\author{Thomas E. Vaughan}
-
-\title{Solutions to Problems in the Sixth Edition of {\it Feeback Control of
-Dynamic Systems} (2010)}
+\input{setup}
 
 \begin{document}
 
-\maketitle
+\frontmatter
+
+\input{title}
+
+\tableofcontents
+
+\input{preface}
+
+\mainmatter
 
 \input{ch01}
 

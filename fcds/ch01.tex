@@ -7,6 +7,43 @@
    What are the main components of a feedback control system?
 \end{problem}
 
+\begin{figure}
+   \begin{center}
+      %\includegraphics{control}
+      \begin{tikzpicture}
+      \tikzset{vertex/.style = {shape=circle,draw,minimum size=10ex}}
+      \tikzset{edge/.style = {->,> = latex'}}
+      \fill[blue!40!white] (-1,-11) rectangle(1,-6.5);
+      \node[blue,left] at (-1,-8.75) {plant};
+      % vertices
+      \node[vertex] (a) at  (0,  0) {input filter};
+      \node[vertex] (b) at  (0, -2.5) {$\Sigma$};
+      \node[above,outer sep=28pt] at (0.2, -2.5) {$+$};
+      \node[below right,outer sep=12pt] at (0.4, -2.5) {$-$};
+      \node[vertex] (c) at  (0, -5) {controller};
+      \node[vertex] (d) at  (0, -7.5) {actuator};
+      \node[vertex] (e) at  (0,-10) {process};
+      \node[vertex] (f) at  (2.5,-10) {sensor};
+      %edges
+      \draw[edge] (a) to (b);
+      \draw[edge] (b) to (c);
+      \draw[edge] (c) to (d);
+      \draw[edge] (d) to (e);
+      \draw[edge] (e) to (f);
+      \draw[edge] (f) to[bend right] (b);
+      \end{tikzpicture}
+      \label{fig:control}
+      \caption{%
+         Main components of a feedback-control system. The comparator is
+         represented by the symbol `$\Sigma$', the symbol for summation,
+         because a difference is a special kind of sum. The comparator takes a
+         difference between two quantities by adding one to the negative of the
+         other. In this case, the comparator adds the value from the input
+         filter to the negative of the output of the sensor.%
+      }
+   \end{center}
+\end{figure}
+
 \begin{solution}
    A feedback control system has
    \begin{enumerate}

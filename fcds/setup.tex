@@ -1,0 +1,85 @@
+
+\usepackage{amsmath,amssymb} % for \text
+\usepackage{amsthm}
+\usepackage{amsfonts} % for \mathbb
+\usepackage{booktabs} % for \toprule, \midrule, \bottomrule in tabular env.
+\usepackage[margin=10pt,font={sl},labelfont=bf]{caption} % custom captions
+\usepackage{fancyhdr}
+\usepackage{framed} % environment for framed box
+\usepackage{graphicx} % for \includegraphics
+\usepackage{natbib}
+\usepackage[rgb]{xcolor} % must be loaded before tikz
+\usepackage{thmtools} % for custom, theorem-like environments
+\usepackage{tikz}
+\usepackage{times}
+\usepackage{vmargin}
+
+% This must be the last package.
+\usepackage[colorlinks=true,citecolor=blue,hyperfootnotes=false]{hyperref}
+
+\usetikzlibrary{arrows}
+
+% Setup of thmtools. See
+% 'http://tex.stackexchange.com/questions/19947/example-solution-environment',
+% whose approach is modified so that 'problem' replaces 'example'.
+\declaretheoremstyle[
+   spaceabove=6pt, spacebelow=6pt,
+   headfont=\normalfont\bfseries,
+   notefont=\mdseries, notebraces={(}{)},
+   bodyfont=\normalfont,
+   postheadspace=1em,
+   numberwithin=section
+]{prbstyle}
+\declaretheoremstyle[
+   spaceabove=6pt, spacebelow=6pt,
+   headfont=\normalfont\bfseries,
+   notefont=\mdseries, notebraces={(}{)},
+   bodyfont=\normalfont,
+   postheadspace=1em,
+   headpunct={},
+   qed=$\blacktriangleleft$,
+   numbered=no
+]{solstyle}
+\declaretheorem[style=prbstyle]{problem}
+\declaretheorem[style=solstyle]{solution}
+% At this point, we have new environments, called 'problem' and 'solution'.
+
+% vmargin setup
+\setpapersize{USletter}
+\setmarginsrb%
+{0.375in}%           left
+{0.375in}%           top
+{0.375in}%           right
+{0.5in}%             bottom
+{3\baselineskip}%    headheight
+{2\baselineskip}%    headsep
+{3\baselineskip}%    footheight
+{4\baselineskip}%    footskip
+
+% mydate macro
+\newcommand{\mydate}{%
+   \number\year\space%
+   \ifcase\month\or%
+      Jan\or\ Feb\or\ Mar\or\ Apr\or\ May\or\ Jun\or%
+      Jul\or\ Aug\or\ Sep\or\ Oct\or\ Nov\or\ Dec
+   \fi\space%
+   \number\day%
+}
+
+\newcommand{\doctitle}{Solutions to Problems in {\it Feedback Control of
+Dynamic Systems}}
+
+\newcommand{\docauthor}{Thomas E. Vaughan}
+
+% fancyhdr settings
+\pagestyle{fancy}
+\lhead{\sffamily\textbf{\doctitle}}
+\chead{}
+\rhead{\includegraphics[height=2\baselineskip]{logo}}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{}
+\cfoot{\sffamily\thepage}
+\rfoot{}
+
