@@ -13,8 +13,10 @@
       \begin{tikzpicture}
       \tikzset{vertex/.style = {shape=circle,draw,minimum size=10ex}}
       \tikzset{edge/.style = {->,> = latex'}}
-      \fill[blue!40!white] (-1,-11) rectangle(1,-6.5);
-      \node[blue,left] at (-1,-8.75) {plant};
+      \fill[green!40!white] (-1.25,-6.25) rectangle(1.25,1.25);
+      \node[green!40!black,left] at (-1.25,-2.5) {logical controller};
+      \fill[blue!40!white] (-1.25,-11.25) rectangle(1.25,-6.25);
+      \node[blue!40!black,left] at (-1.25,-8.75) {plant};
       % vertices
       \node[vertex] (a) at  (0,  0) {input filter};
       \node[vertex] (b) at  (0, -2.5) {$\Sigma$};
@@ -32,15 +34,16 @@
       \draw[edge] (e) to (f);
       \draw[edge] (f) to[bend right] (b);
       \end{tikzpicture}
-      \label{fig:control}
       \caption{%
-         Main components of a feedback-control system. The comparator is
-         represented by the symbol `$\Sigma$', the symbol for summation,
-         because a difference is a special kind of sum. The comparator takes a
-         difference between two quantities by adding one to the negative of the
-         other. In this case, the comparator adds the value from the input
-         filter to the negative of the output of the sensor.%
+         Components of a feedback-control system. The comparator is represented
+         by the symbol `$\Sigma$', the symbol for summation, because a
+         difference is a special kind of sum. The comparator takes a difference
+         between two quantities by adding one to the negative of the other. In
+         this case, the comparator adds the value from the input filter to the
+         negative of the output of the sensor. In some cases, the input filter
+         and the comparator may be integrated as part of the controller.%
       }
+      \label{fig:control}
    \end{center}
 \end{figure}
 
@@ -63,6 +66,128 @@
                output measured by the sensor.
          \end{enumerate}
    \end{enumerate}
+   See Figure~\ref{fig:control}. Because the input filter and the comparator
+   may sometimes be integrated into the controller, the main components of a
+   feedback-control system are the controller, the actuator, the process, and
+   the sensor. The most compact list of parts in a feedback-control system is
+   therefore as follows: controller, plant, and sensor.
 \end{solution}
 
+\begin{problem}
+   What is the purpose of the sensor?
+\end{problem}
+
+\begin{solution}
+   The designer of the control system intends that a particular quantity $Q$ be
+   controlled. The purpose of the sensor is to measure $Q$ or, when that be
+   impossible, to measure a related quantity $Q'$ from which $Q$ may be
+   estimated.
+\end{solution}
+
+\begin{problem}
+   What are three properties of a good sensor?
+\end{problem}
+
+\begin{solution}
+   A good sensor
+   \begin{enumerate}
+      \item introduces sufficiently little noise into its measurement,
+      \item produces a measurement that in the mean (apart from noise) and to a
+         sufficiently good approximation is linearly related to the quantity
+         that the system is intended to control, and
+      \item is reliable.
+   \end{enumerate}
+   A good sensor allows the controller to make a right decision about what the
+   actuator should do.
+\end{solution}
+
+\begin{problem}
+   What is the purpose of the actuator?
+\end{problem}
+
+\begin{solution}
+   The designer of the control system intends that a particular quantity $Q$ be
+   controlled. The purpose of the actuator is to change the value of $Q$.
+\end{solution}
+
+\begin{problem}
+   What are three properties of a good actuator?
+\end{problem}
+
+\begin{solution}
+   A good actuator
+   \begin{enumerate}
+      \item has the power to change the system's output quantity $Q$,
+         regardless of disturbance to the system,
+      \item can change $Q$ sufficiently quickly, and
+      \item is reliable.
+   \end{enumerate}
+   The actuator and the process together make up the plant. So the design of a
+   good actuator is part of the design of a good plant.
+\end{solution}
+
+\begin{problem}
+   What is the purpose of the controller? Give the input(s) and the output(s)
+   of the controller.
+\end{problem}
+
+\begin{solution}
+   The designer of the control system intends that a particular quantity $Q$ be
+   controlled. The purpose of the controller is to decide how the actuator
+   should behave. The input to the controller is the difference between the
+   desired value of $Q$ and the measured value of $Q$.  The output of the
+   controller is a signal that determines the behavior of the actuator.
+\end{solution}
+
+\begin{problem}
+   What physical variable(s) of a process can be directly measured by a
+   Hall-effect sensor?
+\end{problem}
+
+\begin{solution}
+   A Hall-effect sensor can measure either a current or a magnetic field. If
+   the current through the sensor be constant, then the Hall voltage indicates
+   the strength of that component of the magnetic field perpendicular to the
+   plane of the sensor. If the magnetic field be constant, then the Hall
+   voltage indicates the magnitude of the current through the sensor.
+\end{solution}
+
+\begin{problem}
+   What physical variable is measured by a tachometer?
+\end{problem}
+
+\begin{solution}
+   A tachometer measures angular speed.
+\end{solution}
+
+\begin{problem}
+   What are three different techniques for measuring temperature?
+\end{problem}
+
+\begin{solution}
+   Temperature might be measured
+   \begin{enumerate}
+      \item by way of the voltage across a resistor (a thermistor), whose
+         resistance changes with temperature, so that the resistor serves as
+         the load for a constant-current source,
+      \item by way of a bimetallic strip coiled into spring whose point of
+         mechanical equilibrium varies with temperature, or
+      \item by way of a pair of photometers, each of which measures the
+         radiation intensity at a different wavelength near the peak of the
+         ambient blackbody radiation field.
+   \end{enumerate}
+   Each of these has many variations.
+\end{solution}
+
+\begin{problem}
+   Why does the typical sensor have an electrical output, regardless of the
+   physical nature of the measured variable?
+\end{problem}
+
+\begin{solution}
+   An electrical signal can quickly be communicated over a long distance to the
+   comparator; further, the difference between electrical signals, one from the
+   input filter and the other from the sensor, may easily be obtained, whether
+   by analog or by digital means.
+\end{solution}
 
