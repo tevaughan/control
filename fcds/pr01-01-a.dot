@@ -1,0 +1,19 @@
+
+digraph pr01_01_a {
+   nodesep=0.05
+   ranksep=0.05
+   pad=0
+   r [shape=none, texlbl="\parbox{6cm}{\center reference signal (driver's idea of best state)}"];
+   i [texlbl="\parbox{2.6cm}{\center input filter (driver's imagination)}"];
+   c [texlbl="\parbox{2.6cm}{\center comparator and controller (driver's mind)}"];
+   a [texlbl="\parbox{2.8cm}{\center actuator (driver's hands on wheel)}"];
+   p [texlbl="\parbox{3.1cm}{\center process (automobile on road)}"];
+   s [texlbl="\parbox{2.6cm}{\center sensor (driver's eyes)}"];
+   r -> i;
+   i -> c [texlbl="\parbox{5cm}{\center neural signal encoding ideal image}"];
+   c -> a [texlbl="\parbox{3cm}{\center motor-nerve signal}"];
+   a -> p [texlbl="\parbox{3cm}{\center angle of front wheels}"];
+   p -> s [texlbl="\parbox{2cm}{\center automobile's state on road}"];
+   s -> c [texlbl="\parbox{2cm}{\center neural signal encoding actual image}"];
+}
+
