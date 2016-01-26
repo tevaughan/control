@@ -11,7 +11,7 @@ TEX_FIGS = $(FIG_FIGS:.fig=.tex) $(DOT2TEX_FIGS:.dot=.tex)
 	fig2dev -L pdftex_t -p `echo $< | sed 's/fig/pdf/'` $< > $@
 
 %.tex : %.dot
-	dot2tex --autosize --nominsize --usepdflatex --figonly $< > $@
+	dot2tex -f tikz --autosize --nominsize --usepdflatex --figonly $< > $@
 
 .PHONY : all clean
 
