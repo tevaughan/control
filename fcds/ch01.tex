@@ -197,7 +197,6 @@
    Draw a component block diagram for each of the following feedback-control
    systems.
    \begin{enumerate}
-      \setlength\itemsep{-0.3em}
       \item The manual steering system of an automobile.
       \item Drebbel's incubator.
       \item The water level controlled by a float and valve.
@@ -206,14 +205,10 @@
    In each case, indicate the location of each element listed below, and give
    the units associated with each signal.
    \begin{itemize}
-      \setlength\itemsep{-0.3em}
-      \item process
-      \item desired output of process
+      \item controller and its output signal
+      \item actuator and its output signal
+      \item process and its output signal
       \item sensor
-      \item actuator
-      \item output of actuator
-      \item controller
-      \item output of controller
       \item reference signal
       \item error signal
    \end{itemize}
@@ -231,10 +226,53 @@
    \end{center}
 \end{figure}
 
+\begin{figure}
+   \begin{center}
+      \begin{small}
+         \input{pr01-01-b}
+      \end{small}
+      \caption{Block diagram for Drebbel's incubator.}
+      \label{fig:incubator}
+   \end{center}
+\end{figure}
+
 \begin{solution}
    There is a separate figure for each block diagram.
    \begin{enumerate}
-      \item See Figure~\ref{fig:manual-steering}.
+      \item For the manual steering system, see
+         Figure~\ref{fig:manual-steering}.
+         \begin{itemize}
+            \item Functioning as the controller, the mind uses the steering
+               error to tell muscles to contract. The control signal is an
+               increase or decrease in activity along motor neurons to the arms
+               and hands.
+            \item The actuator consists of the driver's hands on the steering
+               wheel, along with the mechanism that conveys the direction angle
+               to the front wheels. The signal from the actuator is the angle
+               of the front wheels on the road; this signal could be expressed
+               in degrees or radians.
+            \item The process is the the automobile as it moves over the road;
+               the relevant signal output from the process is the radiation
+               field sensible through the windshield of the automobile. The
+               relevant dimension in the output signal is the angle at the
+               driver's head between the direction of travel and the light
+               coming from the center-line of the road. This angle might be
+               measured in degrees or radians.
+            \item The sensor consists of the driver's eyes.
+            \item The imagination is an input filter that converts the idea of
+               the automobile's best state into an ideal image of the road as
+               the driver ought to see it.  This is the reference signal. The
+               relevant dimension in the reference signal is the angle at the
+               driver's head between the direction of travel and the
+               center-line of the road.
+            \item This imagined reference image is compared with the observed
+               image that comes from the eyes, which serve as the sensor.  The
+               mind, which serves as comparator, compares the imagined
+               reference image with the observed image and derives an angular
+               steering error, which might be measured in degrees, but the
+               error signal might be a neural state.
+         \end{itemize}
+      \item For Drebbel's incubator, see Figure~\ref{fig:incubator}.
    \end{enumerate}
 \end{solution}
 

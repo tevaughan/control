@@ -3,18 +3,20 @@ digraph pr01_01_a {
    nodesep=0.01
    ranksep=0.01
    pad=0
-   r [shape=none, texlbl="\parbox{2.4cm}{\center reference signal (idea of best state)}"];
+   r [shape=none, label="idea of best state"];
    node [shape=box,margin=0.1];
-   i [texlbl="\parbox{2.0cm}{\center input filter (imagination)}"];
-   c [texlbl="\parbox{3.5cm}{\center comparator and controller (mind)}"];
-   a [texlbl="\parbox{1.9cm}{\center actuator (hands on wheel)}"];
-   p [texlbl="\parbox{1.9cm}{\center process (automobile on road)}"];
-   s [texlbl="\parbox{1.6cm}{\center sensor (eyes)}"];
+   i [label="imagination"];
+   cp [label="mind"];
+   ct [label="mind"];
+   a [label="hands on wheel"];
+   p [label="automobile on road"];
+   s [label="eyes"];
    r -> i;
-   i -> c [texlbl="\parbox{1.9cm}{\flushleft neural signal of ideal image}"];
-   c -> a [texlbl="\parbox{1.6cm}{\flushleft motor-nerve signal}"];
-   a -> p [texlbl="\parbox{1.7cm}{\flushleft angle of front wheels}"];
-   p -> s [texlbl="\parbox{1.9cm}{\flushleft automobile's state on road}"];
-   s -> c [texlbl="\parbox{1.7cm}{\flushleft neural signal of image}",weight=5];
+   i -> cp [label="ideal image"];
+   cp -> ct [label="steering error"];
+   ct -> a [label="muscle control"];
+   a -> p [label="angle of front wheels"];
+   p -> s [label="radiation field at eyes"];
+   s -> cp [label="observed image",weight=5];
 }
 

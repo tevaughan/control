@@ -1,0 +1,22 @@
+
+digraph pr01_01_a {
+   nodesep=0.01
+   ranksep=0.01
+   pad=0
+   r [shape=none, texlbl="desired temperature $T_0$"];
+   node [shape=box,margin=0.1];
+   i [texlbl="length of riser"];
+   cp [label="mercury"];
+   ct [label="mercury"];
+   a [label="flew"];
+   p [label="water"];
+   s [label="alcohol"];
+   r -> i;
+   i -> cp [texlbl="pressure of alcohol at $T_0$"];
+   cp -> ct [label="mercury level"];
+   ct -> a [label="location of float"];
+   a -> p [label="heat input"];
+   p -> s [label="temperature"];
+   s -> cp [label="pressure of alcohol",weight=5];
+}
+
