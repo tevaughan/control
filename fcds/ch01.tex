@@ -1,11 +1,16 @@
 
 \chapter{An Overview and Brief History of Feedback Control}
 
+Chapter~1 establishes the basic terminology used to describe a control system.
+Both historic and current examples are given.
+
 \section{Review Questions}
 
-\begin{problem}
+\subsection{Components of Control System}
+
+\begin{prob}
    What are the main components of a feedback control system?
-\end{problem}
+\end{prob}
 
 \begin{figure}
    \begin{center}
@@ -47,153 +52,152 @@
    \end{center}
 \end{figure}
 
-\begin{solution}
-   A feedback control system has
-   \begin{enumerate}
-      \item a \emph{sensor} that measures the output that is to be controlled,
-      \item an \emph{input filter} that provides a reference value against
-         which the sensor's output is compared,
-      \item a \emph{comparator} that computes the difference between the output
-         of the sensor and the output of the input filter,
-      \item a \emph{controller} that translates the output of the comparator
-         into a control signal,
-      \item a \emph{plant}, which consists of
-         \begin{enumerate}
-            \item an \emph{actuator} that receives the control signal and
-               causes a physical change in the system and
-            \item a \emph{process} that can be disturbed by environmental
-               forces but is primarily influenced by the actuator to produce an
-               output measured by the sensor.
-         \end{enumerate}
-   \end{enumerate}
-   See Figure~\ref{fig:control}. Because the input filter and the comparator
-   may sometimes be integrated into the controller, the main components of a
-   feedback-control system are the controller, the actuator, the process, and
-   the sensor. The most compact list of parts in a feedback-control system is
-   therefore as follows: controller, plant, and sensor.
-\end{solution}
+A feedback control system has
+\begin{enumerate}
+   \item a \emph{sensor} that measures the output that is to be controlled,
+   \item an \emph{input filter} that provides a reference value against which
+      the sensor's output is compared,
+   \item a \emph{comparator} that computes the difference between the output of
+      the sensor and the output of the input filter,
+   \item a \emph{controller} that translates the output of the comparator into
+      a control signal,
+   \item a \emph{plant}, which consists of
+      \begin{enumerate}
+         \item an \emph{actuator} that receives the control signal and causes a
+            physical change in the system and
+         \item a \emph{process} that can be disturbed by environmental forces
+            but is primarily influenced by the actuator to produce an output
+            measured by the sensor.
+      \end{enumerate}
+\end{enumerate}
+See Figure~\ref{fig:control}. Because the input filter and the comparator may
+sometimes be integrated into the controller, the main components of a
+feedback-control system are the controller, the actuator, the process, and the
+sensor. The most compact list of parts in a feedback-control system is
+therefore as follows: controller, plant, and sensor.
 
-\begin{problem}
+\subsection{Purpose of Sensor}
+
+\begin{prob}
    What is the purpose of the sensor?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   The designer of the control system intends that a particular quantity $Q$ be
-   controlled. The purpose of the sensor is to measure $Q$ or, when that be
-   impossible, to measure a related quantity $Q'$ from which $Q$ may be
-   estimated.
-\end{solution}
+The designer of the control system intends that a particular quantity $Q$ be
+controlled. The purpose of the sensor is to measure $Q$ or, when that be
+impossible, to measure a related quantity $Q'$ from which $Q$ may be estimated.
 
-\begin{problem}
+\subsection{Properties of Sensor}
+
+\begin{prob}
    What are three properties of a good sensor?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   A good sensor
-   \begin{enumerate}
-      \item introduces sufficiently little noise into its measurement,
-      \item produces a measurement that in the mean (apart from noise) and to a
-         sufficiently good approximation is linearly related to the quantity
-         that the system is intended to control, and
-      \item is reliable.
-   \end{enumerate}
-   A good sensor allows the controller to make a right decision about what the
-   actuator should do.
-\end{solution}
+A good sensor
+\begin{enumerate}
+   \item introduces sufficiently little noise into its measurement,
+   \item produces a measurement that in the mean (apart from noise) and to a
+      sufficiently good approximation is linearly related to the quantity that
+      the system is intended to control, and
+   \item is reliable.
+\end{enumerate}
+A good sensor allows the controller to make a right decision about what the
+actuator should do.
 
-\begin{problem}
+\subsection{Purpose of Actuator}
+
+\begin{prob}
    What is the purpose of the actuator?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   The designer of the control system intends that a particular quantity $Q$ be
-   controlled. The purpose of the actuator is to change the value of $Q$.
-\end{solution}
+The designer of the control system intends that a particular quantity $Q$ be
+controlled. The purpose of the actuator is to change the value of $Q$.
 
-\begin{problem}
+\subsection{Properties of Actuator}
+
+\begin{prob}
    What are three properties of a good actuator?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   A good actuator
-   \begin{enumerate}
-      \item has the power to change the system's output quantity $Q$,
-         regardless of disturbance to the system,
-      \item can change $Q$ sufficiently quickly, and
-      \item is reliable.
-   \end{enumerate}
-   The actuator and the process together make up the plant. So the design of a
-   good actuator is part of the design of a good plant.
-\end{solution}
+A good actuator
+\begin{enumerate}
+   \item has the power to change the system's output quantity $Q$, regardless
+      of disturbance to the system,
+   \item can change $Q$ sufficiently quickly, and
+   \item is reliable.
+\end{enumerate}
+The actuator and the process together make up the plant. So the design of a
+good actuator is part of the design of a good plant.
 
-\begin{problem}
+\subsection{Purpose of Controller}
+
+\begin{prob}
    What is the purpose of the controller? Give the input(s) and the output(s)
    of the controller.
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   The designer of the control system intends that a particular quantity $Q$ be
-   controlled. The purpose of the controller is to decide how the actuator
-   should behave. The input to the controller is the difference between the
-   desired value of $Q$ and the measured value of $Q$.  The output of the
-   controller is a signal that determines the behavior of the actuator.
-\end{solution}
+The designer of the control system intends that a particular quantity $Q$ be
+controlled. The purpose of the controller is to decide how the actuator should
+behave. The input to the controller is the difference between the desired value
+of $Q$ and the measured value of $Q$.  The output of the controller is a signal
+that determines the behavior of the actuator.
 
-\begin{problem}
+\subsection{Hall-Effect Sensor}
+
+\begin{prob}
    What physical variable(s) of a process can be directly measured by a
    Hall-effect sensor?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   A Hall-effect sensor can measure either a current or a magnetic field. If
-   the current through the sensor be constant, then the Hall voltage indicates
-   the strength of that component of the magnetic field perpendicular to the
-   plane of the sensor. If the magnetic field be constant, then the Hall
-   voltage indicates the magnitude of the current through the sensor.
-\end{solution}
+A Hall-effect sensor can measure either a current or a magnetic field. If the
+current through the sensor be constant, then the Hall voltage indicates the
+strength of that component of the magnetic field perpendicular to the plane of
+the sensor. If the magnetic field be constant, then the Hall voltage indicates
+the magnitude of the current through the sensor.
 
-\begin{problem}
+\subsection{Tachometer}
+
+\begin{prob}
    What physical variable is measured by a tachometer?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   A tachometer measures angular speed.
-\end{solution}
+A tachometer measures angular speed.
 
-\begin{problem}
+\subsection{Measurement of Temperature}
+
+\begin{prob}
    What are three different techniques for measuring temperature?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   Temperature might be measured
-   \begin{enumerate}
-      \item by way of the voltage across a resistor (a thermistor), whose
-         resistance changes with temperature, so that the resistor serves as
-         the load for a constant-current source,
-      \item by way of a bimetallic strip coiled into spring whose point of
-         mechanical equilibrium varies with temperature, or
-      \item by way of a pair of photometers, each of which measures the
-         radiation intensity at a different wavelength near the peak of the
-         ambient blackbody radiation field.
-   \end{enumerate}
-   Each of these has many variations.
-\end{solution}
+Temperature might be measured
+\begin{enumerate}
+   \item by way of the voltage across a resistor (a thermistor), whose
+      resistance changes with temperature, so that the resistor serves as the
+      load for a constant-current source,
+   \item by way of a bimetallic strip coiled into spring whose point of
+      mechanical equilibrium varies with temperature, or
+   \item by way of a pair of photometers, each of which measures the radiation
+      intensity at a different wavelength near the peak of the ambient
+      blackbody radiation field.
+\end{enumerate}
+Each of these has many variations.
 
-\begin{problem}
+\subsection{Sensor with Electrical Output}
+
+\begin{prob}
    Why does the typical sensor have an electrical output, regardless of the
    physical nature of the measured variable?
-\end{problem}
+\end{prob}
 
-\begin{solution}
-   An electrical signal can quickly be communicated over a long distance to the
-   comparator; further, the difference between electrical signals, one from the
-   input filter and the other from the sensor, may easily be obtained, whether
-   by analog or by digital means.
-\end{solution}
+An electrical signal can quickly be communicated over a long distance to the
+comparator; further, the difference between electrical signals, one from the
+input filter and the other from the sensor, may easily be obtained, whether by
+analog or by digital means.
 
 \section{Problems}
 
-\begin{problem}
+\subsection{Block Diagrams}
+
+\begin{prob}
    Draw a component block diagram for each of the following feedback-control
    systems.
    \begin{enumerate}
@@ -214,7 +218,7 @@
    \end{itemize}
    Notice that in each of a number of cases, the same physical device may
    perform more than one of these functions.
-\end{problem}
+\end{prob}
 
 \begin{figure}
    \begin{center}
@@ -236,43 +240,39 @@
    \end{center}
 \end{figure}
 
-\begin{solution}
-   There is a separate figure for each block diagram.
-   \begin{enumerate}
-      \item For the manual steering system, see
-         Figure~\ref{fig:manual-steering}.
-         \begin{itemize}
-            \item Functioning as the controller, the mind uses the steering
-               error to tell muscles to contract. The control signal is an
-               increase or decrease in activity along motor neurons to the arms
-               and hands.
-            \item The actuator consists of the driver's hands on the steering
-               wheel, along with the mechanism that conveys the direction angle
-               to the front wheels. The signal from the actuator is the angle
-               of the front wheels on the road; this signal could be expressed
-               in degrees or radians.
-            \item The process is the the automobile as it moves over the road;
-               the relevant signal output from the process is the radiation
-               field sensible through the windshield of the automobile. The
-               relevant dimension in the output signal is the angle at the
-               driver's head between the direction of travel and the light
-               coming from the center-line of the road. This angle might be
-               measured in degrees or radians.
-            \item The sensor consists of the driver's eyes.
-            \item The imagination is an input filter that converts the idea of
-               the automobile's best state into an ideal image of the road as
-               the driver ought to see it.  This is the reference signal. The
-               relevant dimension in the reference signal is the angle at the
-               driver's head between the direction of travel and the
-               center-line of the road.
-            \item This imagined reference image is compared with the observed
-               image that comes from the eyes, which serve as the sensor.  The
-               mind, which serves as comparator, compares the imagined
-               reference image with the observed image and derives an angular
-               steering error, which might be measured in degrees, but the
-               error signal might be a neural state.
-         \end{itemize}
-      \item For Drebbel's incubator, see Figure~\ref{fig:incubator}.
-   \end{enumerate}
-\end{solution}
+There is a separate figure for each block diagram.
+\begin{enumerate}
+   \item For the manual steering system, see
+      Figure~\ref{fig:manual-steering}.
+      \begin{itemize}
+         \item Functioning as the controller, the mind uses the steering error
+            to tell muscles to contract. The control signal is an increase or
+            decrease in activity along motor neurons to the arms and hands.
+         \item The actuator consists of the driver's hands on the steering
+            wheel, along with the mechanism that conveys the direction angle to
+            the front wheels. The signal from the actuator is the angle of the
+            front wheels on the road; this signal could be expressed in degrees
+            or radians.
+         \item The process is the the automobile as it moves over the road; the
+            relevant signal output from the process is the radiation field
+            sensible through the windshield of the automobile. The relevant
+            dimension in the output signal is the angle at the driver's head
+            between the direction of travel and the light coming from the
+            center-line of the road. This angle might be measured in degrees or
+            radians.
+         \item The sensor consists of the driver's eyes.
+         \item The imagination is an input filter that converts the idea of the
+            automobile's best state into an ideal image of the road as the
+            driver ought to see it.  This is the reference signal. The relevant
+            dimension in the reference signal is the angle at the driver's head
+            between the direction of travel and the center-line of the road.
+         \item This imagined reference image is compared with the observed
+            image that comes from the eyes, which serve as the sensor.  The
+            mind, which serves as comparator, compares the imagined reference
+            image with the observed image and derives an angular steering
+            error, which might be measured in degrees, but the error signal
+            might be a neural state.
+      \end{itemize}
+   \item For Drebbel's incubator, see Figure~\ref{fig:incubator}.
+\end{enumerate}
 

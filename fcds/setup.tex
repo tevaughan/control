@@ -20,30 +20,7 @@
 \usetikzlibrary{arrows,positioning}
 \tikzstyle{state}=[rectangle, rounded corners]
 
-% Setup of thmtools. See
-% 'http://tex.stackexchange.com/questions/19947/example-solution-environment',
-% whose approach is modified so that 'problem' replaces 'example'.
-\declaretheoremstyle[
-   spaceabove=9pt, spacebelow=0pt,
-   headfont=\normalfont\bfseries,
-   notefont=\mdseries, notebraces={(}{)},
-   bodyfont=\normalfont,
-   postheadspace=1em,
-   numberwithin=section
-]{prbstyle}
-\declaretheoremstyle[
-   spaceabove=3pt, spacebelow=9pt,
-   headfont=\normalfont\bfseries,
-   notefont=\mdseries, notebraces={(}{)},
-   bodyfont=\normalfont,
-   postheadspace=1em,
-   headpunct={},
-   qed=$\blacktriangleleft$,
-   numbered=no
-]{solstyle}
-\declaretheorem[style=prbstyle]{problem}
-\declaretheorem[style=solstyle]{solution}
-% At this point, we have new environments, called 'problem' and 'solution'.
+\newenvironment{prob}{\bfseries}{}
 
 % vmargin setup
 \setpapersize{USletter}
