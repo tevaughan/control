@@ -1,0 +1,22 @@
+
+digraph pr01_01_c {
+   nodesep=0.01
+   ranksep=0.01
+   pad=0
+   r [shape=none, texlbl="desired water level"];
+   node [shape=box,margin=0.1];
+   i [label="level of supply's terminus"];
+   cp [label="float"];
+   ct [label="float"];
+   a [label="supply"];
+   p [label="tank"];
+   s [label="float"];
+   r -> i;
+   i -> cp [label="reference float level (supply half on)"];
+   cp -> ct [label="float offset"];
+   ct -> a [label="input area"];
+   a -> p [label="water input"];
+   p -> s [label="water level"];
+   s -> cp [label="float level",weight=5];
+}
+

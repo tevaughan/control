@@ -8,9 +8,11 @@ Both historic and current examples are given.
 
 \subsection{Components of Control System}
 
-\begin{prob}
-   What are the main components of a feedback control system?
-\end{prob}
+\subsubsection{Problem}
+
+What are the main components of a feedback control system?
+
+\subsubsection{Solution}
 
 \begin{figure}
    \begin{center}
@@ -78,9 +80,11 @@ therefore as follows: controller, plant, and sensor.
 
 \subsection{Purpose of Sensor}
 
-\begin{prob}
-   What is the purpose of the sensor?
-\end{prob}
+\subsubsection{Problem}
+
+What is the purpose of the sensor?
+
+\subsubsection{Solution}
 
 The designer of the control system intends that a particular quantity $Q$ be
 controlled. The purpose of the sensor is to measure $Q$ or, when that be
@@ -88,9 +92,11 @@ impossible, to measure a related quantity $Q'$ from which $Q$ may be estimated.
 
 \subsection{Properties of Sensor}
 
-\begin{prob}
-   What are three properties of a good sensor?
-\end{prob}
+\subsubsection{Problem}
+
+What are three properties of a good sensor?
+
+\subsubsection{Solution}
 
 A good sensor
 \begin{enumerate}
@@ -105,18 +111,22 @@ actuator should do.
 
 \subsection{Purpose of Actuator}
 
-\begin{prob}
-   What is the purpose of the actuator?
-\end{prob}
+\subsubsection{Problem}
+
+What is the purpose of the actuator?
+
+\subsubsection{Solution}
 
 The designer of the control system intends that a particular quantity $Q$ be
 controlled. The purpose of the actuator is to change the value of $Q$.
 
 \subsection{Properties of Actuator}
 
-\begin{prob}
-   What are three properties of a good actuator?
-\end{prob}
+\subsubsection{Problem}
+
+What are three properties of a good actuator?
+
+\subsubsection{Solution}
 
 A good actuator
 \begin{enumerate}
@@ -130,10 +140,12 @@ good actuator is part of the design of a good plant.
 
 \subsection{Purpose of Controller}
 
-\begin{prob}
-   What is the purpose of the controller? Give the input(s) and the output(s)
-   of the controller.
-\end{prob}
+\subsubsection{Problem}
+
+What is the purpose of the controller? Give the input(s) and the output(s) of
+the controller.
+
+\subsubsection{Solution}
 
 The designer of the control system intends that a particular quantity $Q$ be
 controlled. The purpose of the controller is to decide how the actuator should
@@ -143,10 +155,12 @@ that determines the behavior of the actuator.
 
 \subsection{Hall-Effect Sensor}
 
-\begin{prob}
-   What physical variable(s) of a process can be directly measured by a
-   Hall-effect sensor?
-\end{prob}
+\subsubsection{Problem}
+
+What physical variable(s) of a process can be directly measured by a
+Hall-effect sensor?
+
+\subsubsection{Solution}
 
 A Hall-effect sensor can measure either a current or a magnetic field. If the
 current through the sensor be constant, then the Hall voltage indicates the
@@ -156,17 +170,21 @@ the magnitude of the current through the sensor.
 
 \subsection{Tachometer}
 
-\begin{prob}
-   What physical variable is measured by a tachometer?
-\end{prob}
+\subsubsection{Problem}
+
+What physical variable is measured by a tachometer?
+
+\subsubsection{Solution}
 
 A tachometer measures angular speed.
 
 \subsection{Measurement of Temperature}
 
-\begin{prob}
-   What are three different techniques for measuring temperature?
-\end{prob}
+\subsubsection{Problem}
+
+What are three different techniques for measuring temperature?
+
+\subsubsection{Solution}
 
 Temperature might be measured
 \begin{enumerate}
@@ -183,10 +201,12 @@ Each of these has many variations.
 
 \subsection{Sensor with Electrical Output}
 
-\begin{prob}
-   Why does the typical sensor have an electrical output, regardless of the
-   physical nature of the measured variable?
-\end{prob}
+\subsubsection{Problem}
+
+Why does the typical sensor have an electrical output, regardless of the
+physical nature of the measured variable?
+
+\subsubsection{Solution}
 
 An electrical signal can quickly be communicated over a long distance to the
 comparator; further, the difference between electrical signals, one from the
@@ -197,29 +217,32 @@ analog or by digital means.
 
 \subsection{Block Diagrams}
 
-\begin{prob}
-   Draw a component block diagram for each of the following feedback-control
-   systems.
-   \begin{enumerate}
-      \item The manual steering system of an automobile.
-      \item Drebbel's incubator.
-      \item The water level controlled by a float and valve.
-      \item Watt's steam engine with fly-ball governor.
-   \end{enumerate}
-   In each case, indicate the location of each element listed below, and give
-   the units associated with each signal.
-   \begin{itemize}
-      \item controller and its output signal
-      \item actuator and its output signal
-      \item process and its output signal
-      \item sensor
-      \item reference signal
-      \item error signal
-   \end{itemize}
-   Notice that in each of a number of cases, the same physical device may
-   perform more than one of these functions.
-\end{prob}
+\subsubsection{Problem}
 
+Draw a component block diagram for each of the following feedback-control
+systems.
+\begin{enumerate}[(a)] \itemsep1pt \parskip0pt \parsep0pt
+   \item The manual steering system of an automobile.
+   \item Drebbel's incubator.
+   \item The water level controlled by a float and valve.
+   \item Watt's steam engine with fly-ball governor.
+\end{enumerate}
+In each case, indicate the location of each element listed below, and give the
+units associated with each signal.
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+   \item controller and its output signal
+   \item actuator and its output signal
+   \item process and its output signal
+   \item sensor
+   \item reference signal
+   \item error signal
+\end{itemize}
+Notice that in each of a number of cases, the same physical device may perform
+more than one of these functions.
+
+\subsubsection{Solution}
+
+There is a separate figure for each block diagram.
 \begin{figure}
    \begin{center}
       \begin{small}
@@ -229,7 +252,6 @@ analog or by digital means.
       \label{fig:manual-steering}
    \end{center}
 \end{figure}
-
 \begin{figure}
    \begin{center}
       \begin{small}
@@ -239,11 +261,8 @@ analog or by digital means.
       \label{fig:incubator}
    \end{center}
 \end{figure}
-
-There is a separate figure for each block diagram.
-\begin{enumerate}
-   \item For the manual steering system, see
-      Figure~\ref{fig:manual-steering}.
+\begin{enumerate}[(a)]
+   \item For the manual steering system, see Figure~\ref{fig:manual-steering}.
       \begin{itemize}
          \item Functioning as the controller, the mind uses the steering error
             to tell muscles to contract. The control signal is an increase or
@@ -274,5 +293,136 @@ There is a separate figure for each block diagram.
             might be a neural state.
       \end{itemize}
    \item For Drebbel's incubator, see Figure~\ref{fig:incubator}.
+      \begin{itemize}
+         \item Functioning as the controller, the flew, in response to the
+            offset of the float from its reference height, shifts away from the
+            half-open position. The offset is the error signal.  The control
+            signal is the angle of the flew. The angle might be measured in
+            degrees.
+         \item The actuator is the fire, which grows hotter when more air flows
+            (when the flew angle corresponds to a more open state) and cooler
+            when less air flows (when the flew angle corresponds to a more
+            closed state).  The signal from the actuator is the rate of heat
+            input to the water. This might be measured in Watts.
+         \item The process is the water tank and the volume of the incubator,
+            which is surrounded by the tank. The signal output by the process
+            is the temperature measured by the thermometer. This signal might
+            be a quantity measured in degrees Kelvin.
+         \item The sensor is the thermometer (alcohol trapped by mercury),
+            whose output signal is the height of the mercury where it touches
+            the float.
+         \item The input filter is the length of the riser, whose bottom is the
+            float. The length of the riser corresponds to the flew's half-open
+            setting when the alcohol has the desired temperature.  The
+            reference signal is the height of the float when the flew is half
+            open (or equivalently, when the desired temperature is obtained).
+         \item The reference height for the float is compared with the actual
+            height of the float by the flew linkage, which, in response to the
+            change in the height of the float, moves away from the
+            configuration in which the flew is half open. The displacement away
+            from the reference position for the linkage is the error signal.
+      \end{itemize}
+      Drebbel's incubator provides an easy way to see why a high gain
+      corresponds to a minimal error in the maintenance of the desired quantity
+      by the control system. In my description of the incubator, I have
+      supposed that the incubator is configured so that the flew is half open
+      when the thermometer detects the ideal temperature. Suppose further,
+      though, that the half-open position allows so much air flow as to raise
+      the temperature. This will cause the alcohol in the thermometer to expand
+      and to rotate the flew in the direction of the closed position. If
+      stable, the control in this case will end up converging on a temperature
+      at least a bit higher than the desired temperature. However, if the ratio
+      of the change in the flew's angle to the change in temperature be large
+      enough, then the controlled temperature will be only very slightly
+      different from the desired temperature, regardless of which flew setting
+      (half open, a quarter open, three-quarters open, etc.)~be chosen to
+      correspond to the ideal temperature. This ratio is the loop gain.
+   \item For the float-valve system, see Figure~\ref{fig:float-valve}.
+      \begin{itemize}
+         \item Functioning as the controller, the float, in response to its own
+            offset from its reference level, allows water to flow from the
+            supply through a certain cross-sectional area.  The offset is the
+            error signal: As the float's level descends, the area increases; as
+            the level ascends, the area decreases. The area is the controller's
+            output signal; it might be measured in square centimeters.
+         \item The actuator is the water-supply pipe, which has a certain water
+            pressure. The actuator's input signal is the area across which the
+            supply water may flow into the tank.  The actuator's output signal
+            is the tank's inflow rate, which is a function of the supply's
+            pressure and of the cross-sectional input area.  The actuator's
+            output signal might be measured in cubic centimeters per second.
+         \item The process is the water tank. The signal output by the process
+            is the level of the water in the tank. The level might be measured
+            in centimeters.
+         \item The sensor is the float, whose output signal is its level, which
+            might be measured in centimeters.
+         \item The input filter is the level of the bottom terminus of the
+            supply pipe. The level of the terminus determines the reference
+            signal, which is the water level at which the float allows the
+            supply to provide new water at half of the maximum rate (or
+            equivalently, at which the desired water level is obtained).
+         \item The reference float level is compared with the actual float
+            level by the float itself, whose own offset from the reference
+            level is the error signal. The error signal might be measured in
+            centimeters.
+      \end{itemize}
+      The float-valve system, like Drebbel's incubator, allows one easily to
+      see how a high loop gain minimizes the error in the controlled variable.
+      I have, as for the case of the incubator, supposed that the reference
+      value (which is compared to the sensor's measurement) corresponds to the
+      state in which the actuator is working at half of its capacity. As
+      before, this might well cause the controlled variable to assume a value
+      different from what is desired (for example, if the rate of outflow from
+      the tank were zero). However, a sufficiently high gain---in this case, a
+      large change in inflow rate for a small change in water level---would
+      reduce the error in the controlled variable to an arbitrarily small
+      value.
+   \item For Watt's steam engine with fly-ball governor, see
+      Figure~\ref{fig:steam-engine}.
+      \begin{itemize}
+         \item Functioning as the controller, the valve, in response to the
+            ball's angular offset from its reference position, shifts away from
+            the half-open position. The offset is the error signal. The control
+            signal is the angle of the valve. The angle of the valve might be
+            measured in degrees.
+         \item The actuator is the steam supply. The actuator's input signal is
+            the valve's angle. The actuator's output signal is the steam's flow
+            rate. The flow rate might be measured in cubic centimeters per
+            second.
+         \item The process is the engine. The signal output by the engine is
+            the engine's spin rate. The spin rate might be measured in
+            revolutions per second.
+         \item The sensor is the ball assembly, whose output signal is the
+            angle that each ball makes with the vertical direction. This angle
+            might be measured in degrees.
+         \item The input filter is the valve linkage, which is configured so
+            that the valve is half open at the desired spin rate.
+         \item The reference ball angle is compared with the measured ball
+            angle by the ball assembly itself, which translates the error
+            signal to the valve. The error signal might be measured in degrees,
+            and there is some gain between the angular offset of the ball
+            assembly and the angular offset of the valve.
+      \end{itemize}
+      As in the previous two examples, a high loop gain will allow the control
+      system to keep the spin rate near the desired rate, regardless of what
+      valve angle is chosen to correspond to the desired rate.
 \end{enumerate}
+\begin{figure}
+   \begin{center}
+      \begin{small}
+         \input{pr01-01-c}
+      \end{small}
+      \caption{Block diagram for float-controller of water level.}
+      \label{fig:float-valve}
+   \end{center}
+\end{figure}
+\begin{figure}
+   \begin{center}
+      \begin{small}
+         \input{pr01-01-d}
+      \end{small}
+      \caption{Block diagram for steam engine with governor.}
+      \label{fig:steam-engine}
+   \end{center}
+\end{figure}
 

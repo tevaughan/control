@@ -1,0 +1,22 @@
+
+digraph pr01_01_d {
+   nodesep=0.01
+   ranksep=0.01
+   pad=0
+   r [shape=none, texlbl="desired spin rate"];
+   node [shape=box,margin=0.1];
+   i [label="valve linkage"];
+   cp [label="ball assembly"];
+   ct [label="valve"];
+   a [label="steam supply"];
+   p [label="engine"];
+   s [label="ball assembly"];
+   r -> i;
+   i -> cp [label="reference ball angle (steam half on)"];
+   cp -> ct [label="ball angle offset"];
+   ct -> a [label="valve angle"];
+   a -> p [label="steam input"];
+   p -> s [label="engine spin rate"];
+   s -> cp [label="ball angle",weight=5];
+}
+
